@@ -28,6 +28,7 @@ class Pose(torch.nn.Module):
 
         # far
         self.init = self.correct.se3() + 0.2
+        self.init = SE3(se3=self.init)
         self.change = []
 
 
@@ -39,8 +40,8 @@ class Pose(torch.nn.Module):
 
     def forward(self) -> torch.Tensor:
         ext = torch.cat((self.R.weight[0], self.t.weight[0]))
-        return SE3(se3=ext + self.init) # [3, 4]
-    
+        return SE3(se3=ext) @ self.init
+
     @torch.no_grad
     def change_rate(self):
         ext = self.forward()
