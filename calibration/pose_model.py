@@ -56,7 +56,7 @@ class Pose(torch.nn.Module):
     @property
     @torch.no_grad
     def get_error(self):
-        error = self.correct.invert() @ self.forward()
+        error = self.forward() @ self.correct.invert()
         error_R = error.R.cpu().numpy()
         error_t = error.t.cpu().numpy()
         return Rotation.from_matrix(error_R).as_rotvec(degrees=True), error_t
