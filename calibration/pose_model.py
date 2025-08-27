@@ -23,12 +23,12 @@ class Pose(torch.nn.Module):
         error /= torch.linalg.norm(error)
 
         self.init = self.correct.se3()
-        # near
-        # self.init[3:] += 0.1
-
-        # far
-        self.init = self.correct.se3() + 0.2
+        
+        self.init = self.correct.se3() + 0.1 # <- this is how we added error, but it might become invalid se3 depending on the value of initial "correct" extirnsic
         self.init = SE3(se3=self.init)
+        
+        self.init = SE3(se3=torch.ones(6).cuda().float() * 0.1) @ self.correct # <- this is a more reasonable way to apply error
+        
         self.change = []
 
 
