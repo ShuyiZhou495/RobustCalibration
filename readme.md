@@ -1,5 +1,5 @@
 # Robust LiDAR-Camera Calibration with 2D Gaussian Splatting 
-[Paper](https://ieeexplore.ieee.org/document/10933576) | [Appendix](assets/appendix.pdf) | [Data](https://www.cvl.iis.u-tokyo.ac.jp/~zhoushuyi495/dataset/robust-k.zip)
+[Paper](https://ieeexplore.ieee.org/document/10933576) | [Appendix](assets/appendix.pdf) | [Data](https://www.cvl.iis.u-tokyo.ac.jp/~zhoushuyi495/dataset/robust-k.zip) | [Github](https://github.com/ShuyiZhou495/RobustCalibration)
 
 This repository is the implementation for "Robust LiDAR-Camera Calibration with 2D Gaussian Splatting", accepted to IEEE Robotics and Automation Letters (Ra-L), 2025.
 ## Introduction
