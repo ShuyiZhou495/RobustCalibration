@@ -17,9 +17,9 @@ For academy use only. Please cite the paper if you use this code.
     ```
     git clone --recursive git@github.com:ShuyiZhou495/RobustCalibration.git
     cd RobustCalibration/submodules/diff-surfel-rasterization.git
-    cd ../..
     python3 setup.py install
-    pip install -e requirements.txt
+    cd ../..
+    pip install -r requirements.txt
     ```
 ### Data
 We provide the KITTI data after motion-compensation in [this url](https://www.cvl.iis.u-tokyo.ac.jp/~zhoushuyi495/dataset/robust-k.zip). The data follows the [Creative Commons Attribution-NonCommercial-ShareAlike 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) liscene of [KITTI](https://www.cvlibs.net/datasets/kitti/eval_odometry.php). All copyright are by the authors of KITTI. You must attribute the work in the manner specified by the authors of KITTI, you may not use this work for commercial purposes and if you alter, transform, or build upon this work, you may distribute the resulting work only under the same license.
